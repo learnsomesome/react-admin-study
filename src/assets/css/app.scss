@@ -70,6 +70,13 @@ $borderColor: #d8d8d8;
 	min-height: 85vh;
 }
 
+.shadow-card {
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+	padding: 30px;
+	background-color: #fff;
+}
+
 .public-title {
 	display: flex;
 	justify-content: space-between;

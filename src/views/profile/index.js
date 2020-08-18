@@ -6,7 +6,7 @@ import './css/index.scss';
 
 export default function Profile() {
 	return (
-		<div className="shadow-radius profile-wrap">
+		<div className="profile-wrap">
 			<ProfileInfo />
 			<ProfileOperate />
 		</div>
