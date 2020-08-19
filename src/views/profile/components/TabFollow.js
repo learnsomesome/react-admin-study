@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useCallback, Fragment } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import TabFollowItem from './TabFollowItem';
 
 import { mockFollowList } from '@/mockData';
 import mockRequest from '@/mockRequest';
 
-import { message, Spin } from 'antd';
+import { message, Spin, Skeleton } from 'antd';
 
 export default function TabFollow() {
 	const [followList, setFollowList] = useState([]);
@@ -12,7 +12,7 @@ export default function TabFollow() {
 
 	useEffect(() => {
 		// Mock request
-		mockRequest(() => setFollowList(mockFollowList), 1000).then(() => {
+		mockRequest(() => setFollowList(mockFollowList)).then(() => {
 			setLoading(false);
 		});
 	}, []);
@@ -28,11 +28,17 @@ export default function TabFollow() {
 	);
 
 	return (
-		<Fragment>
-			<Spin className="spin-wrap" spinning={loading} />
-			{followList.map((item, index) => (
-				<TabFollowItem key={item.id} followInfo={item} changeFollowState={() => changeFollowState(index)} />
-			))}
-		</Fragment>
+		<>
+			{/* <Spin className="spin-wrap" spinning={loading} /> */}
+			{
+				followList.map((item, index) => {
+					return (
+						<Skeleton key={item.id} loading={loading} avatar active>
+							<TabFollowItem followInfo={item} changeFollowState={() => changeFollowState(index)} />
+						</Skeleton>
+					)
+				})
+			}
+		</>
 	);
 }

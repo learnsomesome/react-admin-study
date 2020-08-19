@@ -33,6 +33,9 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 6px;
+		h4 {
+			margin-bottom: 0;
+		}
 	}
 	.info-content p {
 		margin: 9px 0 0;
@@ -44,4 +47,59 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+/* TabMain */
+.basic-info,
+.photo-info {
+	padding: 24px 0;
+	text-align: left;
+	border-bottom: 2px solid #eee;
+}
+
+.info-item {
+	padding: 10px 0;
+	border-bottom: 1px solid #eee;
+	span:first-child {
+		display: inline-block;
+		width: 4rem;
+		margin-right: 10px;
+	}
+	span:last-child {
+		color: #333;
+		font-weight: 600;
+	}
+}
+
+.photo-area {
+	display: flex;
+	height: 125px;
+	div {
+		flex: 1;
+		padding-top: 10px;
+		&:first-child {
+			padding-right: 20px;
+		}
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* TabWeibo */
+.total-weibo {
+	margin: 12px 0;
+	font-size: 12px;
+	text-align: left;
+}
+
+.weibo-item {
+	margin-top: 12px;
+	.ant-card-meta-detail {
+		text-align: left;
+		.ant-card-meta-title {
+			white-space: normal;
+		}
+	}
 }

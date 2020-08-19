@@ -37,7 +37,7 @@ const contentList = {
 };
 
 export default function ProfileInfo() {
-	const [key, setKey] = useState(tabList[0].key);
+	const [key, setKey] = useState(tabList[1].key);
 
 	return (
 		<div className="info-wrap">

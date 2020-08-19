@@ -1,7 +1,8 @@
 const mockRequest = (callBack, timeout = 500) => {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
-			resolve(callBack && callBack())
+			callBack && callBack();
+			resolve();
 		}, timeout);
 	})
 }
