@@ -13,7 +13,7 @@ class Index extends Component {
 			<div className="layout">
 				<Layout style={{ minHeight: '100vh' }}>
 					<SideMenu />
-					<Layout>
+					<Layout style={{backgroundColor: '#eee'}}>
 						<TopHeader />
 						{breadCrumb.show ? <BreadCrumb /> : null}
 						<MainContent />

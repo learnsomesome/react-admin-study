@@ -21,7 +21,6 @@ const MainContent = ({ location }) => {
 				<Content style={{ padding: '15px' }}>
 					<Switch>
 						{routes.map(ele => handleFilter(ele.permission) && <Route render={() => <ele.component />} key={ele.path} path={ele.path} />)}
-						<Redirect from="/" exact to="/dashboard" />
 						<Redirect to="/error/404" />
 					</Switch>
 				</Content>

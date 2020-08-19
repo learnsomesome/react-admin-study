@@ -1,4 +1,6 @@
 .info-wrap {
+	display: flex;
+	flex-direction: column;
 	width: 400px;
 	text-align: center;
 }
@@ -10,7 +12,36 @@
 	transform: translateX(-50%);
 }
 
-.info-header {
-	margin: 32px 0;
+.info-card {
+	margin-top: 36px;
+	height: 600px;
 }
 
+/* TabFollow */
+.follow-item {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #ccc;
+	padding: 9px 0;
+	.item-info {
+		flex: 1;
+		text-align: left;
+		margin-left: 16px;
+	}
+	.info-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 6px;
+	}
+	.info-content p {
+		margin: 9px 0 0;
+	}
+}
+
+.spin-wrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
