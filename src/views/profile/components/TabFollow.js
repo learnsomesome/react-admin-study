@@ -1,21 +1,25 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, memo } from 'react';
 import TabFollowItem from './TabFollowItem';
 
 import { mockFollowList } from '@/mockData';
 import mockRequest from '@/mockRequest';
 
-import { message, Spin, Skeleton } from 'antd';
+import { message, Spin } from 'antd';
 
-export default function TabFollow() {
+export default memo(function TabFollow() {
 	const [followList, setFollowList] = useState([]);
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		// Mock request
-		mockRequest(() => setFollowList(mockFollowList)).then(() => {
-			setLoading(false);
-		});
+		mockRequest(() => setFollowList(mockFollowList));
 	}, []);
+
+	useEffect(() => {
+		if (followList.length > 0) {
+			setLoading(false);
+		}
+	}, [followList]);
 
 	const changeFollowState = useCallback(
 		index => {
@@ -29,16 +33,10 @@ export default function TabFollow() {
 
 	return (
 		<>
-			{/* <Spin className="spin-wrap" spinning={loading} /> */}
-			{
-				followList.map((item, index) => {
-					return (
-						<Skeleton key={item.id} loading={loading} avatar active>
-							<TabFollowItem followInfo={item} changeFollowState={() => changeFollowState(index)} />
-						</Skeleton>
-					)
-				})
-			}
+			<Spin className="spin-wrap" spinning={loading} />
+			{followList.map((item, index) => {
+				return <TabFollowItem key={item.id} followInfo={item} changeFollowState={() => changeFollowState(index)} />;
+			})}
 		</>
 	);
-}
+});

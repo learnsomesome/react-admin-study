@@ -1,5 +1,15 @@
 import React from 'react';
 
-const NoData = props => <div className="no-data" style={{textAlign:'center',padding:'10px'}}>{props.text || '暂无数据'}</div>;
+import { Empty } from 'antd';
 
-export default NoData;
+const EmptyStyle = {
+	position: 'absolute',
+	top: '50%',
+	left: '50%',
+	transform: 'translate(-50%, -50%)',
+	marginTop: '0'
+};
+
+export default function NoData({ desc, hide }) {
+	return <Empty style={{ ...EmptyStyle, display: hide ? 'none' : 'block' }} image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg" description={desc} />;
+}

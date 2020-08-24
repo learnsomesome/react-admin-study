@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Avatar, Button, Tag } from 'antd';
 
-export default function TabFollowItem({ followInfo, changeFollowState }) {
+export default memo(function TabFollowItem({ followInfo, changeFollowState }) {
 	const { avatarSrc, username, isFollowed, tags, desc } = followInfo;
 
 	return (
@@ -25,4 +25,4 @@ export default function TabFollowItem({ followInfo, changeFollowState }) {
 			</div>
 		</div>
 	);
-}
+});

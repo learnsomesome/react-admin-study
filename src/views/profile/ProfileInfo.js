@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 
 import TabMain from './components/TabMain';
 import TabWeibo from './components/TabWeibo';
@@ -10,19 +10,19 @@ import avatar from '@/assets/img/info_avatar.png';
 import infoBg from '@/assets/img/info_bg.png';
 
 const info_bg = {
-	position: "relative",
-	height: "100px",
+	position: 'relative',
+	height: '100px',
 	background: `url(${infoBg}) no-repeat center -75px/cover`
-}
+};
 
 const tabList = [
-  {
-    key: 'main',
-		tab: '主页',
-  },
-  {
-    key: 'weibo',
-    tab: '微博',
+	{
+		key: 'main',
+		tab: '主页'
+	},
+	{
+		key: 'weibo',
+		tab: '微博'
 	},
 	{
 		key: 'follow',
@@ -31,30 +31,22 @@ const tabList = [
 ];
 
 const contentList = {
-  main: <TabMain />,
+	main: <TabMain />,
 	weibo: <TabWeibo />,
 	follow: <TabFollow />
 };
 
-export default function ProfileInfo() {
+export default memo(function ProfileInfo() {
 	const [key, setKey] = useState(tabList[1].key);
 
 	return (
 		<div className="info-wrap">
 			<div className="info-bg" style={info_bg}>
-				<Avatar className="info-avatar" size={64} src={avatar}/>
+				<Avatar className="info-avatar" size={64} src={avatar} />
 			</div>
-			<Card
-				className="info-card"
-				bodyStyle={{paddingTop: 0, overflow: "scroll", height: "505px", position: "relative"}}
-				title="Stephen Curry"
-				tabList={tabList}
-				activeTabKey={key}
-				onTabChange={key => setKey(key)}
-				hoverable
-			>
+			<Card hoverable className="info-card" bodyStyle={{ paddingTop: 0, overflow: 'scroll', height: '505px', position: 'relative' }} title="Stephen Curry" tabList={tabList} activeTabKey={key} onTabChange={key => setKey(key)}>
 				{contentList[key]}
-      </Card>
+			</Card>
 		</div>
-	)
-}
+	);
+});

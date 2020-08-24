@@ -23,20 +23,24 @@
 	align-items: center;
 	border-bottom: 1px solid #ccc;
 	padding: 9px 0;
+
 	.item-info {
 		flex: 1;
 		text-align: left;
 		margin-left: 16px;
 	}
+
 	.info-header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 6px;
+
 		h4 {
 			margin-bottom: 0;
 		}
 	}
+
 	.info-content p {
 		margin: 9px 0 0;
 	}
@@ -54,17 +58,19 @@
 .photo-info {
 	padding: 24px 0;
 	text-align: left;
-	border-bottom: 2px solid #eee;
+	border-bottom: 2px solid #ccc;
 }
 
 .info-item {
 	padding: 10px 0;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #ccc;
+
 	span:first-child {
 		display: inline-block;
 		width: 4rem;
 		margin-right: 10px;
 	}
+
 	span:last-child {
 		color: #333;
 		font-weight: 600;
@@ -74,13 +80,16 @@
 .photo-area {
 	display: flex;
 	height: 125px;
+
 	div {
 		flex: 1;
 		padding-top: 10px;
+
 		&:first-child {
 			padding-right: 20px;
 		}
 	}
+
 	img {
 		width: 100%;
 		height: 100%;
@@ -96,10 +105,16 @@
 
 .weibo-item {
 	margin-top: 12px;
+
 	.ant-card-meta-detail {
 		text-align: left;
+
 		.ant-card-meta-title {
 			white-space: normal;
 		}
+	}
+
+	.card-border-color {
+		border-color: #ccc;
 	}
 }
