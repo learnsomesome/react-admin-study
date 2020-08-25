@@ -4,7 +4,7 @@ import { Card, Avatar } from 'antd';
 import { ExportOutlined, MessageOutlined, LikeOutlined } from '@ant-design/icons';
 
 export default memo(function TabWeiboItem({ weiboInfo }) {
-	const { imgSrc, actionNum, title, desc } = weiboInfo;
+	const { imgSrc, actionNum, title, desc, avatarSrc } = weiboInfo;
 	const { forward, comment, like } = actionNum;
 
 	return (
@@ -24,7 +24,7 @@ export default memo(function TabWeiboItem({ weiboInfo }) {
 					</span>
 				]}
 			>
-				<Card.Meta avatar={<Avatar size={48} src={require('@/assets/img/info_avatar.png')} />} title={title} description={desc} />
+				<Card.Meta avatar={<Avatar size={48} src={avatarSrc} />} title={title} description={desc} />
 			</Card>
 		</div>
 	);

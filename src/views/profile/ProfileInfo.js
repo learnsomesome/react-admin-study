@@ -37,7 +37,7 @@ const contentList = {
 };
 
 export default memo(function ProfileInfo() {
-	const [key, setKey] = useState(tabList[1].key);
+	const [key, setKey] = useState(tabList[0].key);
 
 	return (
 		<div className="info-wrap">

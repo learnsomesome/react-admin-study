@@ -39,6 +39,7 @@ export const mockWeiboList = [
 	{
 		id: 1,
 		imgSrc: '',
+		avatarSrc: require('@/assets/img/info_avatar.png'),
 		actionNum: {
 			forward: 0,
 			comment: 0,
@@ -50,6 +51,7 @@ export const mockWeiboList = [
 	{
 		id: 2,
 		imgSrc: 'https://wx2.sinaimg.cn/mw690/cc9e95d0gy1ggi1cwkoe3j2137137ws4.jpg',
+		avatarSrc: require('@/assets/img/info_avatar.png'),
 		actionNum: {
 			forward: 200,
 			comment: 324,
@@ -63,37 +65,33 @@ export const mockWeiboList = [
 export const mockHotList = [
 	{
 		id: 1,
-		title: 'item1',
+		title: '爸爸要求儿子每天户外玩2小时',
 		tag: 'new'
 	},
 	{
 		id: 2,
-		title: 'item2',
+		title: '王源ThinkBook',
 		tag: 'recommend'
 	},
 	{
 		id: 3,
-		title: 'item3'
+		title: '海底捞排号'
 	},
 	{
 		id: 4,
-		title: 'item4'
+		title: '乘风破浪的爱情'
 	},
 	{
 		id: 5,
-		title: 'item5'
+		title: '梅西'
 	},
 	{
 		id: 6,
-		title: 'item6'
+		title: '以家人之名'
 	},
 	{
 		id: 7,
-		title: 'item7'
-	},
-	{
-		id: 8,
-		title: 'item8'
+		title: '看到情侣的我'
 	}
 ];
 
@@ -119,13 +117,14 @@ export const mockWeiboList_operate = [
 			{
 				id: 1,
 				imgSrc: '',
+				avatarSrc: 'https://tvax1.sinaimg.cn/crop.0.0.996.996.180/005WAsLuly8gd0lun5ghnj30ro0rodhe.jpg?KID=imgbed,tva&Expires=1598379631&ssig=%2FLc%2FC7aGs4',
 				actionNum: {
 					forward: 0,
-					comment: 0,
-					like: 0
+					comment: 19,
+					like: 191
 				},
-				title: 'Strive to win the championship next year🏀!',
-				desc: '2020/8/19 23:10'
+				title: '东契奇牛逼！🐮 ​​​​',
+				desc: '2020/8/24 06:37'
 			}
 		]
 	},
@@ -134,14 +133,15 @@ export const mockWeiboList_operate = [
 		list: [
 			{
 				id: 2,
-				imgSrc: 'https://wx2.sinaimg.cn/mw690/cc9e95d0gy1ggi1cwkoe3j2137137ws4.jpg',
+				imgSrc: 'https://wx1.sinaimg.cn/mw690/61ff3255gy1ghta4266u1j20v90v37wh.jpg',
+				avatarSrc: 'https://tvax4.sinaimg.cn/crop.0.0.690.690.180/61ff3255ly8gerzkz4k0ej20j60j60tb.jpg?KID=imgbed,tva&Expires=1598378495&ssig=tWd5%2FccuCa',
 				actionNum: {
-					forward: 200,
-					comment: 324,
-					like: 666
+					forward: 11,
+					comment: 49,
+					like: 406
 				},
-				title: 'You can do all things👌🏽!',
-				desc: '2020/8/18 08:33'
+				title: '杜威哈三人拿下了过去11个赛季中的9个得分王 😊',
+				desc: '2020/8/17 03:05'
 			}
 		]
 	},

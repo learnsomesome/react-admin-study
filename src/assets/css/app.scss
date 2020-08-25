@@ -1,20 +1,33 @@
+$htmlHeight: 100vh;
+$borderColor: #d8d8d8;
+
+// 页面宽度不足1920px时，缩放80%
+@media (max-width: 1919px) and (min-width: 768px) {
+	html {
+		zoom: 80%;
+		$htmlHeight: 125vh;
+	}
+}
+
+.layout {
+	min-height: $htmlHeight;
+}
+
 /* 路由过渡效果 */
 .fade-enter {
-  opacity: 0;
-  transform: translateX(-50%);
+	opacity: 0;
+	transform: translateX(-50%);
 }
 
 .fade-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: all 500ms ease-out;
+	opacity: 1;
+	transform: translateX(0);
+	transition: all 500ms ease-out;
 }
 
 .fade-exit {
 	opacity: 0;
 }
-
-$borderColor: #d8d8d8;
 
 .app-sider {
 	border-right: 1px solid $borderColor;

@@ -1,3 +1,5 @@
+@import '@/assets/css/app.scss';
+
 .operate-wrap {
 	flex: 1;
 	margin-left: 20px;
@@ -78,6 +80,7 @@
 
 	.home-right {
 		flex: 1;
+		overflow-y: auto;
 	}
 
 	.hot-list {
@@ -100,7 +103,7 @@
 			cursor: pointer;
 
 			:hover {
-				color: #40A9FF;
+				color: #40a9ff;
 			}
 
 			.item-content {
@@ -125,7 +128,8 @@
 
 	.home-right {
 		.tab-item {
-			padding: 24px;
+			height: $htmlHeight * 0.7;
+			overflow-y: auto;
 		}
 	}
 }

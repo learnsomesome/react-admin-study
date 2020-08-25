@@ -1,7 +1,8 @@
 @import './info.scss';
 @import './operate.scss';
+@import '@/assets/css/app.scss';
 
 .profile-wrap {
 	display: flex;
-	min-height: 80vh;
+	min-height: $htmlHeight * 0.8;
 }

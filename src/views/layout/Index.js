@@ -10,10 +10,10 @@ class Index extends Component {
 	render() {
 		const { breadCrumb } = this.props;
 		return (
-			<div className="layout">
-				<Layout style={{ minHeight: '100vh' }}>
+			<div>
+				<Layout className="layout">
 					<SideMenu />
-					<Layout style={{backgroundColor: '#eee'}}>
+					<Layout style={{ backgroundColor: '#eee' }}>
 						<TopHeader />
 						{breadCrumb.show ? <BreadCrumb /> : null}
 						<MainContent />
@@ -29,7 +29,4 @@ const mapDispatchToProps = dispatch => ({
 		dispatch(setUserInfo(data));
 	}
 });
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps
-)(Index);
+export default connect(mapStateToProps, mapDispatchToProps)(Index);
