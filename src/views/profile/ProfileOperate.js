@@ -4,6 +4,8 @@ import { Tabs } from 'antd';
 import { HomeOutlined, MessageOutlined } from '@ant-design/icons';
 
 import OperateMessage from './components/OperateMessage';
+import OperateHomeLeft from './components/OperateHomeLeft';
+import OperateHomeRight from './components/OperateHomeRight';
 const { TabPane } = Tabs;
 
 export default memo(function ProfileOperate() {
@@ -19,7 +21,10 @@ export default memo(function ProfileOperate() {
 					}
 					key="home"
 				>
-					Content of Tab 1
+					<div className="home-wrap">
+						<OperateHomeLeft />
+						<OperateHomeRight />
+					</div>
 				</TabPane>
 				<TabPane
 					tab={

@@ -25,7 +25,7 @@ import About from '../views/about/About';
 import Profile from '../views/profile';
 
 export const routes = [
-	{ path: '/dashboard', component: Dashboard },
+	{ path: '/', component: Dashboard, exact: true },
 	{ path: '/icon', component: Icon },
 	{ path: '/form/basic', component: BasicForm },
 	{ path: '/form/editor', component: Editor },
@@ -43,7 +43,7 @@ export const routes = [
 	{ path: '/control/tree', component: BasicTree },
 	{ path: '/control/select', component: BasicSelect },
 	{ path: '/control/other', component: Other },
-	{ path: '/permission/toggle', component: Toggle,permission:1 },
+	{ path: '/permission/toggle', component: Toggle, permission: 1 },
 	{ path: '/permission/intercept', component: Intercept },
 	{ path: '/news', component: News },
 	{ path: '/error/404', component: Error404 },

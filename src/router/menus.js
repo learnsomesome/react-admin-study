@@ -8,7 +8,7 @@
 
 export const menus = [
 	{
-		path: '/dashboard',
+		path: '/',
 		title: '首页',
 		icon: 'home'
 	},
@@ -47,7 +47,7 @@ export const menus = [
 				children: [
 					{
 						path: '/menu/level/submenu-1',
-						title: '三级菜单1',
+						title: '三级菜单1'
 					},
 					{
 						path: '/menu/level/submenu-2',

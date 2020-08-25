@@ -56,3 +56,76 @@
 		transition: all 500ms ease-in;
 	}
 }
+
+/* OperateHome */
+.home-wrap {
+	display: flex;
+	padding: 8px;
+
+	.home-left {
+		width: 534px;
+		padding-right: 24px;
+
+		.left-title {
+			color: #a0a0a0;
+			margin: 12px 0;
+		}
+
+		.ant-input {
+			border-radius: 20px;
+		}
+	}
+
+	.home-right {
+		flex: 1;
+	}
+
+	.hot-list {
+		display: flex;
+		height: 200px;
+		margin-bottom: 24px;
+
+		.list-side {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			flex: 1;
+			border-right: 1px solid #ccc;
+			padding: 0 24px;
+		}
+
+		.list-item {
+			display: flex;
+			justify-content: space-between;
+			cursor: pointer;
+
+			:hover {
+				color: #40A9FF;
+			}
+
+			.item-content {
+				width: 9rem;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+		}
+	}
+
+	.carousel-list {
+		.slick-dots-bottom {
+			bottom: 20px;
+		}
+
+		.pic-item {
+			height: 240px;
+			width: 100%;
+		}
+	}
+
+	.home-right {
+		.tab-item {
+			padding: 24px;
+		}
+	}
+}
