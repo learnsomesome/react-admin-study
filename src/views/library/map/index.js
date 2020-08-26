@@ -10,11 +10,7 @@ export default memo(function IMap() {
 			plugins: ['AMap.ToolBar']
 		}).then(AMap => {
 			const map = new AMap.Map('container');
-			map.addControl(
-				new AMap.ToolBar({
-					position: 'RT'
-				})
-			);
+			map.addControl(new AMap.ToolBar());
 			map.add(
 				new AMap.Marker({
 					position: map.getCenter()
