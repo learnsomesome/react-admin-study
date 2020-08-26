@@ -1,5 +1,5 @@
 import Dashboard from '../views/dashboard/Index';
-import Icon from '../views/icon/Index';
+/* import Icon from '../views/icon/Index';
 import Error404 from '../views/error/Error404';
 import Error500 from '../views/error/Error500';
 import LineChart from '../views/chart/LineChart';
@@ -21,12 +21,20 @@ import BasicSelect from '../views/control/BasicSelect';
 import Other from '../views/control/Other';
 import MenuOne from '../views/levelMenu/MenuOne';
 import MenuTwo from '../views/levelMenu/MenuTwo';
-import About from '../views/about/About';
+import About from '../views/about/About'; */
 import Profile from '../views/profile';
+import IMap from '../views/library/map';
+import IChart from '../views/library/chart';
+
+import LineChart from '../views/chart/LineChart';
+import Keyboard from '../views/chart/KeyBoard';
+import BarChart from '../views/chart/BarChart';
+import PieChart from '../views/chart/PieChart';
+import MixinChart from '../views/chart/MixinChart';
 
 export const routes = [
 	{ path: '/', component: Dashboard, exact: true },
-	{ path: '/icon', component: Icon },
+	/* { path: '/icon', component: Icon },
 	{ path: '/form/basic', component: BasicForm },
 	{ path: '/form/editor', component: Editor },
 	{ path: '/form/markdown', component: MarkDown },
@@ -48,6 +56,14 @@ export const routes = [
 	{ path: '/news', component: News },
 	{ path: '/error/404', component: Error404 },
 	{ path: '/error/500', component: Error500 },
-	{ path: '/about', component: About },
-	{ path: '/profile', component: Profile }
+	{ path: '/about', component: About }, */
+	{ path: '/profile', component: Profile },
+	{ path: '/library/map', component: IMap },
+	{ path: '/library/chart', component: IChart },
+
+	{ path: '/chart/line', component: LineChart },
+	{ path: '/chart/keyboard', component: Keyboard },
+	{ path: '/chart/bar', component: BarChart },
+	{ path: '/chart/pie', component: PieChart },
+	{ path: '/chart/mixin', component: MixinChart }
 ];

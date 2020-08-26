@@ -12,7 +12,7 @@ export const menus = [
 		title: '首页',
 		icon: 'home'
 	},
-	{
+	/* {
 		path: '/icon',
 		title: '图标',
 		icon: 'file'
@@ -162,10 +162,54 @@ export const menus = [
 		path: '/about',
 		title: '关于',
 		icon: 'copyright'
-	},
+	}, */
 	{
 		path: '/profile',
-		title: '测试页面',
-		icon: 'user'
+		title: '类微博主页',
+		icon: 'weibo'
+	},
+	{
+		path: '/library',
+		title: '第三方类库',
+		icon: 'tool',
+		children: [
+			{
+				path: '/library/map',
+				title: '地图',
+				icon: 'compass'
+			},
+			{
+				path: '/library/chart',
+				title: '图表',
+				icon: 'bar-chart'
+			}
+		]
+	},
+	{
+		path: '/chart',
+		title: '图表',
+		icon: 'area-chart',
+		children: [
+			{
+				path: '/chart/line',
+				title: '折线图'
+			},
+			{
+				path: '/chart/keyboard',
+				title: '键盘图表'
+			},
+			{
+				path: '/chart/bar',
+				title: '柱状图'
+			},
+			{
+				path: '/chart/pie',
+				title: '饼图'
+			},
+			{
+				path: '/chart/mixin',
+				title: '混合图表'
+			}
+		]
 	}
 ];

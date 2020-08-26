@@ -33,8 +33,10 @@ export default memo(function OperateHomeLeft() {
 				<Carousel effect="fade" autoplay dotPosition="bottom">
 					{mockPicList.map(item => {
 						return (
-							<div key={item.id} className="pic-item">
-								<img className="pic-item" src={item.picSrc} alt="pic" />
+							<div key={item.id}>
+								<a href="/#">
+									<img className="pic-item" src={item.picSrc} alt="pic" />
+								</a>
 							</div>
 						);
 					})}

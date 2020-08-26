@@ -1,11 +1,12 @@
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 
 import { Card, Avatar } from 'antd';
-import { ExportOutlined, MessageOutlined, LikeOutlined } from '@ant-design/icons';
+import { ExportOutlined, MessageOutlined, LikeOutlined, LikeFilled } from '@ant-design/icons';
 
 export default memo(function TabWeiboItem({ weiboInfo }) {
 	const { imgSrc, actionNum, title, desc, avatarSrc } = weiboInfo;
 	const { forward, comment, like } = actionNum;
+	const [isLike, setIsLike] = useState(false);
 
 	return (
 		<div className="weibo-item">
@@ -19,8 +20,16 @@ export default memo(function TabWeiboItem({ weiboInfo }) {
 					<span>
 						<MessageOutlined /> {comment ? comment : '评论'}
 					</span>,
-					<span>
-						<LikeOutlined /> {like ? like : '点赞'}
+					<span onClick={() => setIsLike(!isLike)}>
+						{isLike ? (
+							<>
+								<LikeFilled /> {like + 1}
+							</>
+						) : (
+							<>
+								<LikeOutlined /> {like ? like : '点赞'}
+							</>
+						)}
 					</span>
 				]}
 			>
