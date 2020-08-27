@@ -26,12 +26,6 @@ import Profile from '../views/profile';
 import IMap from '../views/library/map';
 import IChart from '../views/library/chart';
 
-import LineChart from '../views/chart/LineChart';
-import Keyboard from '../views/chart/KeyBoard';
-import BarChart from '../views/chart/BarChart';
-import PieChart from '../views/chart/PieChart';
-import MixinChart from '../views/chart/MixinChart';
-
 export const routes = [
 	{ path: '/', component: Dashboard, exact: true },
 	/* { path: '/icon', component: Icon },
@@ -59,11 +53,5 @@ export const routes = [
 	{ path: '/about', component: About }, */
 	{ path: '/profile', component: Profile },
 	{ path: '/library/map', component: IMap },
-	{ path: '/library/chart', component: IChart },
-
-	{ path: '/chart/line', component: LineChart },
-	{ path: '/chart/keyboard', component: Keyboard },
-	{ path: '/chart/bar', component: BarChart },
-	{ path: '/chart/pie', component: PieChart },
-	{ path: '/chart/mixin', component: MixinChart }
+	{ path: '/library/chart', component: IChart }
 ];

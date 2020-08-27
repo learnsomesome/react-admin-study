@@ -175,3 +175,115 @@ export const mockWeiboList_operate = [
 		]
 	}
 ];
+
+export const mockChartOptions = [
+	{
+		title: {
+			text: '柱状图',
+			left: 'center',
+			top: 5
+		},
+		tooltip: {},
+		legend: {
+			data: ['销量'],
+			right: 5,
+			top: 5
+		},
+		xAxis: {
+			data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+		},
+		yAxis: {},
+		series: [
+			{
+				name: '销量',
+				type: 'bar',
+				data: [5, 20, 36, 10, 10, 20]
+			}
+		]
+	},
+	{
+		title: {
+			text: '折线图',
+			left: 'center',
+			top: 5
+		},
+		tooltip: {
+			trigger: 'axis',
+			axisPointer: {
+				type: 'cross'
+			}
+		},
+		legend: {
+			data: ['2018年销量', '2019年销量', '2020年销量'],
+			top: 0,
+			right: 0,
+			orient: 'vertical'
+		},
+		grid: {
+			top: 75
+		},
+		xAxis: {
+			data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+		},
+		yAxis: {},
+		series: [
+			{
+				name: '2018年销量',
+				type: 'line',
+				data: [5, 20, 36, 10, 10, 20]
+			},
+			{
+				name: '2019年销量',
+				type: 'line',
+				data: [15, 30, 34, 8, 9, 22]
+			},
+			{
+				name: '2020年销量',
+				type: 'line',
+				data: [13, 23, 43, 11, 5, 15]
+			}
+		]
+	},
+	{
+		title: {
+			left: 'center',
+			top: 5,
+			text: '饼图'
+		},
+		toolbox: {
+			show: true,
+			feature: {
+				dataView: {
+					show: true
+				},
+				saveAsImage: {
+					show: true
+				}
+			}
+		},
+		tooltip: {
+			formatter: '{a} <br/> {b} :{c} ({d}%)'
+		},
+		legend: {
+			orient: 'vertical',
+			left: 5,
+			top: 5,
+			data: ['华东', '华北', '华南']
+		},
+		series: [
+			{
+				name: '销量',
+				type: 'pie',
+				hoverAnimation: false,
+				selectedMode: true,
+				radius: '55%',
+				center: ['50%', '60%'],
+				data: [
+					{ value: 20, name: '华东' },
+					{ value: 45, name: '华北' },
+					{ value: 35, name: '华南' }
+				]
+			}
+		]
+	}
+];

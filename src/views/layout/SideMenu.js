@@ -91,7 +91,4 @@ const mapDispatchToProps = dispatch => ({
 		dispatch(addTag(data));
 	}
 });
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps
-)(withRouter(SideNenu));
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(SideNenu));

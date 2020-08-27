@@ -5,7 +5,7 @@ import store from '@/redux/store';
 import './assets/css/app';
 import './assets/css/common';
 
-class App extends React.Component {
+class App extends React.PureComponent {
 	render() {
 		return (
 			<Provider store={store}>
