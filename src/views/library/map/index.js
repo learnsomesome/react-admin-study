@@ -19,5 +19,5 @@ export default memo(function IMap() {
 		});
 	}, []);
 
-	return <div id="container"></div>;
+	return <div id="container" />;
 });
